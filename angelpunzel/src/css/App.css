@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.top-picture {
+  height: 20vw;
+  background-color: beige ;
+}
+
+.navbar {
+  padding: 1%;
+  background-color: red;
+}
+
+.navbar a {
+  padding: 2%;
+}
