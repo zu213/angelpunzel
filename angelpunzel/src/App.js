@@ -8,9 +8,7 @@ import Contact from './Contact.js';
 function App() {
   return (
     <div className="App">
-      <body>
         <div className='top-picture'>
-          a
         </div>
         <div className='navbar'>
           <Link to='/'>HOME</Link>
@@ -25,7 +23,6 @@ function App() {
 
           <Route path='/contact-me' element={<Contact/>} />
         </Routes>
-      </body>
     </div>
   );
 }

@@ -1,3 +1,5 @@
-.App {
-  text-align: center;
+.generic-div {
+  height: 20vw;
+  background-color: rgb(207, 207, 108) ;
+  margin-top: 5%;
 }

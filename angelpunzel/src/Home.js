@@ -1,16 +1,16 @@
 import './css/Home.css';
 
-const formatXAxis = () => {
-    return 0;
-};
-
 
 function Home() {
-    var placeholder = formatXAxis()
 
     return (
       <div>
-        {placeholder}
+      <div className='generic-div'>
+      </div>
+      <div className='generic-div'>
+      </div>
+      <div className='generic-div'>
+      </div>
       </div>
     )
   }

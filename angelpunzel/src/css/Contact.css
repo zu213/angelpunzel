@@ -1,3 +1,11 @@
-.App {
-  text-align: center;
+.map {
+  width: 80%;
+  height: 30vw;
+  padding: 2vw;
+  padding-left: 10%;
+}
+
+.contact {
+  height: 25vw;
+  background-color: beige ;
 }

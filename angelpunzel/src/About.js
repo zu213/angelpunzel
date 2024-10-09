@@ -1,16 +1,18 @@
 import './css/About.css';
 
-const formatXAxis = () => {
-    return 0;
-};
-
-
 function About() {
-    var placeholder = formatXAxis()
 
     return (
       <div>
-        {placeholder}
+        <div className='generic-div-white'>
+
+        </div>
+        <div className='generic-div-black'>
+          
+        </div>
+        <div className='generic-div-white'>
+        
+        </div>
       </div>
     )
   }
