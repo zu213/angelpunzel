@@ -14,14 +14,11 @@ function Contact() {
     const email = document.getElementById("email");
     const phone = document.getElementById("phone");
     const message = document.getElementById("message");
-    const nameValue = name.value;
-    const emailValue = email.value;
-    const phoneValue = phone.value;
-    const messageValue = message.value;
     name.value = "";
     email.value = "";
     phone.value = "";
     message.value = "";
+    
     emailjs.sendForm('service_couf6bs', 'template_z6yyec8', e.target, 'hr0si7yaJ8e8_bh11')
     .then((result) => {
       // nothing
