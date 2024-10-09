@@ -1,10 +1,17 @@
 .generic-div-white {
-  height: 15vw;
-  background-color: rgb(254, 254, 254) ;
+  background-color: rgb(254, 254, 254);
+  padding: 5vw;
 }
 
 .generic-div-black {
-  height: 15vw;
   background-color: rgb(0, 0, 0) ;
   color: white;
+  padding: 5vw;
+
 }
+
+h2 {
+  font-size: 1.5vw;
+  font-style: italic;
+}
+

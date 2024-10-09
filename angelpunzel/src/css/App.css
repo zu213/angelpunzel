@@ -3,15 +3,59 @@
 }
 
 .top-picture {
-  height: 20vw;
-  background-color: beige ;
+  background-color: white ;
 }
+
+.top-picture img {
+  height: 20vw;
+  width: auto;
+  padding: 0vw;
+}
+
 
 .navbar {
   padding: 1%;
-  background-color: red;
+  background-color: black;
+  color: white;
+}
+
+.navbar a:visited{
+  color: white;
 }
 
 .navbar a {
   padding: 2%;
+}
+
+.inline-right-small {
+  text-align: left;
+  display: inline-block;
+  width: 35%;
+}
+.inline-left-big {
+  text-align: right;
+  display: inline-block;
+  width: 65%;
+  vertical-align: top;
+}
+
+.inline-left-small {
+  text-align: right;
+  display: inline-block;
+  width: 35%;
+}
+.inline-right-big {
+  text-align: left;
+  display: inline-block;
+  width: 65%;
+  vertical-align: top;
+}
+
+img {
+  width: 15vw;
+  padding: 2vw;
+}
+
+h1 {
+  font-size: 2vw;
 }

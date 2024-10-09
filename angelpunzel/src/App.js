@@ -5,10 +5,13 @@ import Home from './Home.js';
 import About from './About.js';
 import Contact from './Contact.js';
 
+import logo from './imgs/logo.webp'
+
 function App() {
   return (
     <div className="App">
         <div className='top-picture'>
+          <img src={logo} alt='' id="Image"></img>
         </div>
         <div className='navbar'>
           <Link to='/'>HOME</Link>
