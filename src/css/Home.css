@@ -1,7 +1,8 @@
 .banner {
   vertical-align: middle;
-  font-size: 50px;
+  font-size:xx-large;
   background-color: rgb(219,217,182) ;
+  text-align: center;
 }
 
 .banner img{
@@ -9,20 +10,28 @@
   padding: 0%;
   height: 100%;
   object-fit: contain;
+  position: relative;
 }
 
 .centered-banner {
   text-decoration: underline;
   color: white;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  top: 30vw;
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
 
+}
+
+@media only screen and (max-width: 600px) {
+  .centered-banner {
+    top: 40vw;
+    font-size: large;
+  }
 }
 
 
@@ -56,6 +65,6 @@
   padding-top: 0;
   left: 20%;
   position: relative;
-  height: 350px;
+  height: 30vw;
   width: auto;
 }
