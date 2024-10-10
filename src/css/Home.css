@@ -19,7 +19,7 @@
   position: absolute;
   text-align: center;
   width: 100%;
-  top: 30vw;
+  top: 20vw;
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
@@ -27,9 +27,25 @@
 
 }
 
+@media only screen and (max-width: 800px) {
+  .centered-banner {
+    top: 30vw;
+    font-size: large;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .centered-banner {
     top: 40vw;
+    font-size: large;
+  }
+}
+
+
+
+@media only screen and (max-width: 300px) {
+  .centered-banner {
+    top: 50vw;
     font-size: large;
   }
 }
@@ -67,4 +83,15 @@
   position: relative;
   height: 30vw;
   width: auto;
+}
+
+@media only screen and (max-width: 400px) {
+  .centered-banner {
+    top: 45vw;
+    font-size: large;
+  }
+
+  .portrait {
+    height: 50vw;
+  }
 }
