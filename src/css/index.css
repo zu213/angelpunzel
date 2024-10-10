@@ -5,9 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+a {
+  color: rgb(54, 145, 188);
+
+}
+
+a:hover {
+  color: rgb(116, 250, 255);
+  
+}
+
+a:visited {
+  color: rgb(72, 36, 234);
+  
 }

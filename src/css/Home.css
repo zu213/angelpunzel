@@ -1,5 +1,61 @@
+.banner {
+  vertical-align: middle;
+  font-size: 50px;
+  background-color: rgb(219,217,182) ;
+}
+
+.banner img{
+  border-radius: 0;
+  padding: 0%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.centered-banner {
+  text-decoration: underline;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+
+}
+
+
 .generic-div {
-  height: 20vw;
-  background-color: rgb(207, 207, 108) ;
-  margin-top: 5%;
+  height: 25%;
+  background-color: rgb(219,217,182) ;
+  margin-bottom: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.sub-generic-div-left {
+  width: 35%;
+  text-align: left;
+  padding-right: 2%;
+  padding-left: 10%;
+  display: inline-block;
+  vertical-align: top;
+  direction: rtl;
+}
+
+.sub-generic-div-right {
+  width: 35%;
+  text-align: left;
+  padding-left: 2%;
+  padding-right: 10%;
+  display: inline-block;
+}
+
+.portrait {
+  padding-top: 0;
+  left: 20%;
+  position: relative;
+  height: 350px;
+  width: auto;
 }

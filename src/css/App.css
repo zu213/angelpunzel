@@ -7,9 +7,10 @@
 }
 
 .top-picture img {
-  height: 20vw;
+  border-radius: 0;
+  height: 80%;
   width: auto;
-  padding: 0vw;
+  padding: 0;
 }
 
 
@@ -19,43 +20,47 @@
   color: white;
 }
 
+.navbar a{
+  color: white;
+  padding: 2%;
+}
+
+.navbar a:hover{
+  color: rgb(183, 183, 183);
+}
+
+.navbar a:visited:hover{
+  color: rgb(183, 183, 183);
+}
+
 .navbar a:visited{
   color: white;
 }
 
-.navbar a {
-  padding: 2%;
-}
-
-.inline-right-small {
-  text-align: left;
-  display: inline-block;
-  width: 35%;
-}
-.inline-left-big {
-  text-align: right;
-  display: inline-block;
-  width: 65%;
-  vertical-align: top;
-}
 
 .inline-left-small {
   text-align: right;
   display: inline-block;
-  width: 35%;
+  width: 24%;
+  padding-right: 3%;
+  padding-left: 6%;
 }
 .inline-right-big {
   text-align: left;
   display: inline-block;
-  width: 65%;
+  width: 49%;
+  padding-left: 3%;
+  padding-right: 6%;
   vertical-align: top;
 }
 
 img {
-  width: 15vw;
-  padding: 2vw;
+  padding: 2%;
+  width: 100%;
+  border-radius: 20%;
 }
 
 h1 {
-  font-size: 2vw;
+  font-size: 30px;
+  margin-top: 0%;
 }

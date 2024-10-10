@@ -5,7 +5,7 @@ import Home from './Home.js';
 import About from './About.js';
 import Contact from './Contact.js';
 
-import logo from './imgs/logo.webp'
+import logo from './imgs/logo.jpg'
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Link to='/'>HOME</Link>
           <Link to='/about-me'>ABOUT ME</Link>
           <Link to='/contact-me'>CONTACT ME</Link>
-
+          <Link to="https://www.linkedin.com/in/haydnupstone/"  target="_blank" rel="noreferrer">LINKEDIN</Link>
         </div>
         <Routes>
           <Route exact path='/' element={<Home/>} />
