@@ -27,29 +27,6 @@
 
 }
 
-@media only screen and (max-width: 800px) {
-  .centered-banner {
-    top: 30vw;
-    font-size: large;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .centered-banner {
-    top: 40vw;
-    font-size: large;
-  }
-}
-
-
-
-@media only screen and (max-width: 300px) {
-  .centered-banner {
-    top: 50vw;
-    font-size: large;
-  }
-}
-
 
 .generic-div {
   height: 25%;
@@ -85,13 +62,36 @@
   width: auto;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
   .centered-banner {
-    top: 45vw;
+    top: 30vw;
+    font-size: large;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .centered-banner {
+    top: 40vw;
     font-size: large;
   }
 
   .portrait {
     height: 50vw;
+  }
+}
+
+
+
+@media only screen and (max-width: 300px) {
+  .centered-banner {
+    top: 50vw;
+    font-size: large;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .centered-banner {
+    top: 45vw;
+    font-size: large;
   }
 }
