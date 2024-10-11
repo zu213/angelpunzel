@@ -94,4 +94,21 @@
     top: 45vw;
     font-size: large;
   }
+
+  .sub-generic-div-left {
+    display: block;
+    width: 70%;
+  }
+
+  .sub-generic-div-right {
+    display: block;
+    padding-left: 10%;
+    width: 70%;
+  }
+
+  .portrait {
+    padding-top: 3%;
+    left: 20%;
+    height: 70vw;
+  }
 }
