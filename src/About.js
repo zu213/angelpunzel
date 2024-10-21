@@ -18,10 +18,10 @@ function About() {
               <div className='inline-right-big'>
                 <h1>Working with&nbsp;
                   <a href="https://www.nxera.life/" target="_blank" rel="noreferrer">
-                   Sosei Group Corporation
+                   Nxera Pharma
                   </a>
                 </h1>
-                <h2>Japanese listed biotechnology group (Mothers index)</h2>
+                <h2>Japanese listed biotechnology group</h2>
                 Project managing the introduction of a new senior employee long term incentive plan.
 
                 Project managing UK company reorganisation

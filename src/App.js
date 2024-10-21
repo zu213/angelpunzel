@@ -15,8 +15,8 @@ function App() {
         </div>
         <div className='navbar'>
           <Link to='/'>HOME</Link>
-          <Link to='/about-me'>ABOUT ME</Link>
-          <Link to='/contact-me'>CONTACT ME</Link>
+          <Link to='/about-me'>ABOUT US</Link>
+          <Link to='/contact-me'>CONTACT US</Link>
           <Link to="https://www.linkedin.com/in/haydnupstone/"  target="_blank" rel="noreferrer">LINKEDIN</Link>
         </div>
         <Routes>
