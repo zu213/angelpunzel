@@ -14,12 +14,19 @@ function Contact() {
     const email = document.getElementById("email");
     const phone = document.getElementById("phone");
     const message = document.getElementById("message");
+    const params = {
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      message: message.value
+    }
+
     name.value = "";
     email.value = "";
     phone.value = "";
     message.value = "";
 
-    emailjs.sendForm('service_couf6bs', 'template_z6yyec8', e.target, 'hr0si7yaJ8e8_bh11')
+    emailjs.send('service_couf6bs', 'template_z6yyec8', params, 'hr0si7yaJ8e8_bh11')
     .then((result) => {
       // nothing
     }, (error) => {
