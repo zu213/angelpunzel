@@ -69,6 +69,10 @@ h1 {
 }
 
 @media only screen and (max-width: 400px) {
+  .top-picture {
+    aspect-ratio: 4/1;
+  }
+
   .top-picture img {
     width: 100%;
   }
