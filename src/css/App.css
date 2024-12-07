@@ -4,6 +4,7 @@
 
 .top-picture {
   background-color: white ;
+  aspect-ratio: 10/1;
 }
 
 .top-picture img {

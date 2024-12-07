@@ -1,6 +1,7 @@
 import './css/Contact.css';
 import {APIProvider, Map} from '@vis.gl/react-google-maps';
 import emailjs from 'emailjs-com';
+import { useState } from 'react';
 
 const apiKey = process.env.REACT_APP_API_URL;
 const center = { lat: 51.763733745, lng: -0.574621325 };
@@ -8,26 +9,41 @@ const center = { lat: 51.763733745, lng: -0.574621325 };
 
 function Contact() {
 
+  const [name, setName] = useState(null)
+  const [email, setEmail] = useState(null)
+  const [phone, setPhone] = useState(null)
+  const [message, setMessage] = useState(null)
+
+  const handleInputChange = (e) => {
+    const id = e.target.id;
+    if(id === 'name'){
+      setName(e.target.value);
+    }else if(id === 'email'){
+      setEmail(e.target.value);
+    }else if(id === 'phone'){
+      setPhone(e.target.value);
+    }else if(id === 'message'){
+      setMessage(e.target.value);
+    }
+  };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const phone = document.getElementById("phone");
-    const message = document.getElementById("message");
     const params = {
-      name: name.value,
-      email: email.value,
-      phone: phone.value,
-      message: message.value
+      name: name,
+      email: email,
+      phone: phone,
+      message: message
     }
 
-    name.value = "";
-    email.value = "";
-    phone.value = "";
-    message.value = "";
+    setName(null)
+    setEmail(null)
+    setPhone(null)
+    setMessage(null)
 
-    emailjs.send('service_couf6bs', 'template_z6yyec8', params, 'hr0si7yaJ8e8_bh11')
-    .then((result) => {
+    emailjs.send('service_couf6bs', 'template_jd7o6er', params, 'hr0si7yaJ8e8_bh11')
+    .then((_) => {
       // nothing
     }, (error) => {
         console.log(error.text);
@@ -52,21 +68,21 @@ function Contact() {
         <form onSubmit={handleSubmit}>
           <div className='inline'>
             <label htmlFor="fname">Name:</label><br />
-            <input type="text" id="name" name="name" placeholder="" />
+            <input type="text" id="name" name="name" onChange={handleInputChange} placeholder="" />
           </div>
           <div className='inline'>
             <label htmlFor="email">Email:</label><br />
-            <input type="text" id="email" name="email" placeholder="" />
+            <input type="text" id="email" name="email" onChange={handleInputChange} placeholder="" />
           </div>
           <div className='inline'>
             <label htmlFor="phone">Phone:</label><br />
-            <input type="text" id="phone" name="phone" placeholder="" />
+            <input type="text" id="phone" name="phone" onChange={handleInputChange} placeholder="" />
           </div>
           <br /><br />
           <div className='message-holder'>
           <div className='message'>
           <label htmlFor="message">Message:</label><br />
-          <textarea name="message" id="message" cols="120" rows="5"></textarea>
+          <textarea name="message" id="message" onChange={handleInputChange} cols="120" rows="5"></textarea>
           </div>
           </div>
           <br /><br />

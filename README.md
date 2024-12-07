@@ -1,4 +1,4 @@
-# 👼 Angelpunzel 🧱
+# 👼 Angelpunzel
 
 Basic webpage example using react.
 

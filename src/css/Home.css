@@ -1,8 +1,8 @@
 .banner {
-  vertical-align: middle;
   font-size:xx-large;
   background-color: rgb(219,217,182) ;
   text-align: center;
+  aspect-ratio: 64/18;
 }
 
 .banner img{

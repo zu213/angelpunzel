@@ -9,13 +9,13 @@ import autumnPath from './imgs/autumncropped.jpg'
 
 function Home() {
 
-    return (
-      <div>
+  return (
+    <div>
 
-        <div className='banner'>
-          <img alt="autumn path" src={autumnPath}></img>
-          <div className='centered-banner'>Getting you through change</div>
-        </div>
+      <div className='banner'>
+        <img alt="" src={autumnPath}></img>
+        <div className='centered-banner'>Getting you through change</div>
+      </div>
 
       <div className='generic-div'>
           <div className='sub-generic-div-left'>
@@ -68,8 +68,8 @@ function Home() {
           
       </div>
 
-      </div>
-    )
+    </div>
+  )
   }
 
 export default Home;
