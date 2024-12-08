@@ -37,10 +37,10 @@ function Contact() {
       message: message
     }
 
-    setName(null)
-    setEmail(null)
-    setPhone(null)
-    setMessage(null)
+    setName("")
+    setEmail("")
+    setPhone("")
+    setMessage("")
 
     emailjs.send('service_couf6bs', 'template_jd7o6er', params, 'hr0si7yaJ8e8_bh11')
     .then((_) => {
@@ -68,21 +68,21 @@ function Contact() {
         <form onSubmit={handleSubmit}>
           <div className='inline'>
             <label htmlFor="fname">Name:</label><br />
-            <input type="text" id="name" name="name" onChange={handleInputChange} placeholder="" />
+            <input type="text" id="name" name="name" value={name} onChange={handleInputChange} />
           </div>
           <div className='inline'>
             <label htmlFor="email">Email:</label><br />
-            <input type="text" id="email" name="email" onChange={handleInputChange} placeholder="" />
+            <input type="text" id="email" name="email" value={email} onChange={handleInputChange} placeholder="" />
           </div>
           <div className='inline'>
             <label htmlFor="phone">Phone:</label><br />
-            <input type="text" id="phone" name="phone" onChange={handleInputChange} placeholder="" />
+            <input type="text" id="phone" name="phone" value={phone} onChange={handleInputChange} placeholder="" />
           </div>
           <br /><br />
           <div className='message-holder'>
           <div className='message'>
           <label htmlFor="message">Message:</label><br />
-          <textarea name="message" id="message" onChange={handleInputChange} cols="120" rows="5"></textarea>
+          <textarea name="message" id="message" value={message} onChange={handleInputChange} cols="120" rows="5"></textarea>
           </div>
           </div>
           <br /><br />
