@@ -4,18 +4,16 @@
 
 .top-picture {
   background-color: white ;
-  aspect-ratio: 10/1;
+  aspect-ratio: 12/1;
+  padding-bottom: 0;
 }
 
 .top-picture img {
   border-radius: 0;
-  height: 80%;
+  height: 100%;
   width: auto;
   padding: 0;
 }
-
-
-
 
 .navbar {
   padding: 1%;

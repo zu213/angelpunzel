@@ -1,11 +1,9 @@
 import './css/Contact.css';
-import {APIProvider, Map} from '@vis.gl/react-google-maps';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
 
 const apiKey = process.env.REACT_APP_API_URL;
-const center = { lat: 51.763733745, lng: -0.574621325 };
-
+const mapSource = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Berkhamsted,Berkhamsted+UK`
 
 function Contact() {
 
@@ -53,15 +51,16 @@ function Contact() {
 
   return (
     <div>
-      
-      <APIProvider apiKey={apiKey} onLoad={() => console.log('Maps API has loaded.')}>
-        <div className='map'>
-          <Map
-                defaultZoom={13}
-                defaultCenter={ center }
-          />
-        </div>
-      </APIProvider>
+      <div>
+        <iframe
+          title="map"
+          className='map'
+          frameborder="0"
+          referrerpolicy="no-referrer-when-downgrade"
+          src={mapSource}
+          allowfullscreen>
+        </iframe>
+      </div>
 
       <div className='contact'>
         <h1 className='left'>SAY HELLO</h1>
@@ -80,10 +79,10 @@ function Contact() {
           </div>
           <br /><br />
           <div className='message-holder'>
-          <div className='message'>
-          <label htmlFor="message">Message:</label><br />
-          <textarea name="message" id="message" value={message} onChange={handleInputChange} cols="120" rows="5"></textarea>
-          </div>
+            <div className='message'>
+              <label htmlFor="message">Message:</label><br />
+              <textarea name="message" id="message" value={message} onChange={handleInputChange} cols="120" rows="5"></textarea>
+            </div>
           </div>
           <br /><br />
           <input className="submit" type="submit" value="Submit" />
