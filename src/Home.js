@@ -1,45 +1,85 @@
 import './css/Home.css';
 
+import { useRef, useEffect, useState } from 'react';
+
 import img1 from './imgs/home1.webp';
-import img2 from './imgs/home2.webp';
+import img2 from './imgs/discussion.jpg';
 import img3 from './imgs/home3.webp';
-import autumnPath from './imgs/autumncropped.jpg'
+import autumnPath from './imgs/autumncropped2.jpg'
 
 
 
 function Home() {
+  const divToSlide = useRef([])
+  const divToSlideParent = useRef([])
+  const [bannerLoaded, setBannerLoaded] = useState(false)
+
+  const getCallback = (i) => {
+    return (entries, _) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            divToSlide.current[i].classList.add('visible');
+          }
+        });
+      };
+  }
+
+  useEffect(() => {
+    if (divToSlide.current.length < 1 || divToSlideParent.current.length < 1) return;
+
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observers = []
+    for(let i = 0; i < divToSlide.current.length; i++) {
+      const callback = getCallback(i)
+      const observer = new IntersectionObserver(callback, options);
+      observer.observe(divToSlideParent.current[i]);
+      observers.push(observer)
+
+    }
+    return () => {
+      observers.map(e => e.disconnect());
+    };
+  }, []);
+
 
   return (
-    <div>
+    <div className='home'>
 
       <div className='banner'>
-        <img alt="" src={autumnPath}></img>
-        <div className='centered-banner'>Getting you through change</div>
+        <img className='banner-image' onLoad={() => setBannerLoaded(true)} alt="" src={autumnPath}></img>
+        {bannerLoaded && <div className='centered-banner'>
+            Getting you through change
+        </div>}
       </div>
 
-      <div className='generic-div'>
-          <div className='sub-generic-div-left'>
-            <h1>WHO WE ARE</h1>
-            <h2>Netsuite Implementation Expert | Pharmaceutical Specialist | Collaborative Decision Maker</h2>
-            Right now many organisations are faced with the challenge of
-            gaining competitive advantage in a rapidly changing
-            technology driven environment, while meeting the demands of
-            cost cutting.&lrm;
-            <br />
-            <br />
-            Angelpunzel can help your enterprise achieve strong results in
-            the current environment.&lrm;
-          </div>
-          <div className='sub-generic-div-right'>
-            <img className='portrait' src={img1} alt='' id="Image"></img>
-          </div>
+      <div className='generic-div' ref={el => divToSlideParent.current[0] = el}>
+        <div className='sub-generic-div-left slide-in-left' ref={el => divToSlide.current[0] = el}>
+          <h1>WHO WE ARE</h1>
+          <h2>Netsuite Implementation Expert | Pharmaceutical Specialist | Collaborative Decision Maker</h2>
+          Right now many organisations are faced with the challenge of
+          gaining competitive advantage in a rapidly changing
+          technology driven environment, while meeting the demands of
+          cost cutting.&lrm;
+          <br />
+          <br />
+          Angelpunzel can help your enterprise achieve strong results in
+          the current environment.&lrm;
+        </div>
+        <div className='sub-generic-div-right fixed-height'>
+          <img className='portrait' src={img1} alt=''></img>
+        </div>
       </div>
 
-      <div className='generic-div'>
+      <div className='generic-div darker-div' ref={el => divToSlideParent.current[1] = el}>
         <div className='sub-generic-div-left'>
-            <img src={img2} alt='' id="Image"></img>
+            <img src={img2} alt=''></img>
           </div>
-          <div className='sub-generic-div-right'>
+          <div className='sub-generic-div-right slide-in-right' ref={el => divToSlide.current[1] = el}>
             <h1>EXPERTISE</h1>
             
             Specialising in project management of business integration,
@@ -55,15 +95,15 @@ function Home() {
           </div>
       </div>
 
-      <div className='generic-div'>
-        <div className='sub-generic-div-left'>
+      <div className='generic-div' ref={el => divToSlideParent.current[2] = el}>
+        <div className='sub-generic-div-left slide-in-left' ref={el => divToSlide.current[2] = el}>
             <h1>TROUBLESHOOTING</h1>
             Experts in assessing problems and identifying their root cause.&lrm;
             Presenting and working with your team to implement effective
             solutions.&lrm;
         </div>
         <div className='sub-generic-div-right'>
-            <img src={img3} alt='' id="Image"></img>
+            <img src={img3} alt=''></img>
         </div>
           
       </div>

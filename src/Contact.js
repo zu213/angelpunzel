@@ -11,6 +11,7 @@ function Contact() {
   const [email, setEmail] = useState(null)
   const [phone, setPhone] = useState(null)
   const [message, setMessage] = useState(null)
+  const [loadingMap, setLoadingMap] = useState(true)
 
   const handleInputChange = (e) => {
     const id = e.target.id;
@@ -41,9 +42,7 @@ function Contact() {
     setMessage("")
 
     emailjs.send('service_couf6bs', 'template_jd7o6er', params, 'hr0si7yaJ8e8_bh11')
-    .then((_) => {
-      // nothing
-    }, (error) => {
+    .error((error) => {
         console.log(error.text);
     });                                                                                                                                                                                                                                                           
 
@@ -52,39 +51,43 @@ function Contact() {
   return (
     <div>
       <div>
+        {loadingMap && <div>
+          <span className="loader"></span>
+        </div>}
         <iframe
           title="map"
           className='map'
           frameborder="0"
           referrerpolicy="no-referrer-when-downgrade"
           src={mapSource}
-          allowfullscreen>
+          allowfullscreen
+          onLoad={() => {setLoadingMap(false)}}>
         </iframe>
       </div>
 
       <div className='contact'>
-        <h1 className='left'>SAY HELLO</h1>
+        <h1 className='left contact-intro'>SAY HELLO</h1>
         <form onSubmit={handleSubmit}>
           <div className='inline'>
-            <label htmlFor="fname">Name:</label><br />
+            <label htmlFor="fname">Name</label><br />
             <input type="text" id="name" name="name" value={name} onChange={handleInputChange} />
           </div>
           <div className='inline'>
-            <label htmlFor="email">Email:</label><br />
+            <label htmlFor="email">Email</label><br />
             <input type="text" id="email" name="email" value={email} onChange={handleInputChange} placeholder="" />
           </div>
           <div className='inline'>
-            <label htmlFor="phone">Phone:</label><br />
+            <label htmlFor="phone">Phone</label><br />
             <input type="text" id="phone" name="phone" value={phone} onChange={handleInputChange} placeholder="" />
           </div>
-          <br /><br />
+          <br />
           <div className='message-holder'>
             <div className='message'>
-              <label htmlFor="message">Message:</label><br />
+              <label htmlFor="message">Message</label><br />
               <textarea name="message" id="message" value={message} onChange={handleInputChange} cols="120" rows="5"></textarea>
             </div>
           </div>
-          <br /><br />
+          <br />
           <input className="submit" type="submit" value="Submit" />
         </form> 
       </div>

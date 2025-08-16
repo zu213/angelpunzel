@@ -5,7 +5,7 @@ import Home from './Home.js';
 import About from './About.js';
 import Contact from './Contact.js';
 
-import logo from './imgs/logo.jpg'
+import logo from './imgs/logo2.jpg'
 
 function App() {
   return (

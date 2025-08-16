@@ -1,8 +1,10 @@
+
 .map {
   width: 80%;
   height: 25vw;
   padding: 2vw;
   padding-left: 0%;
+  border-radius: 30px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -10,11 +12,33 @@
     height: 75vw;
   }
 }
+.loader {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fca311;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 
 
 .contact {
   padding: 2%;
   height: 50%;
-  background-color: beige ;
+  background-color: #e5e5e5;
 }
 
 .inline {
@@ -27,9 +51,77 @@
   text-align: center
 }
 
+textarea {
+  border-radius: 5px;
+  border-width: 0;
+}
+
+input {
+  border-radius: 2px;
+  border-width: 0;
+  line-height: 4vh;
+}
+
 .submit {
   text-align: center;
   width: 10%;
+}
+
+.submit {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.submit:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.submit:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.submit:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.submit:focus {
+  outline: 1px transparent;
+}
+
+.submit:before {
+  display: none;
+}
+
+.submit:-webkit-details-marker {
+  display: none;
 }
 
 input {
@@ -41,6 +133,13 @@ input {
   text-align: left;
   padding-left: 15%;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 1100px) {
+  .contact-intro {
+    text-align: center;
+    padding-left: 0;
+  }
 }
 
 @media only screen and (max-width: 900px) {
