@@ -22,7 +22,6 @@ function About() {
   }
 
   useEffect(() => {
-    console.log(divToSlide.current)
     if (divToSlide.current.length < 1 || divToSlideParent.current.length < 1) return; // Ensure refs are not null
 
     const options = {
@@ -49,7 +48,7 @@ function About() {
       <div className='generic-div-white' ref={el => divToSlideParent.current[0] = el}>
         <div className='slide-in-down' ref={el => divToSlide.current[0] = el}>
             <div className='inline-left-small'>
-              <img src={img1} alt='' id="Image"></img>
+              <img src={img1} alt='Nxera pharma'></img>
 
             </div>
             <div className='inline-right-big'>
@@ -81,7 +80,7 @@ function About() {
           </div>
 
           <div className='inline-right-small'>
-            <img src={img2} alt='' id="Image"></img>
+            <img src={img2} alt='Seqirus' id="Image"></img>
           </div>
         </div>
       </div>
@@ -89,7 +88,7 @@ function About() {
       <div className='generic-div-white' ref={el => divToSlideParent.current[2] = el}>
         <div className='slide-in-down' ref={el => divToSlide.current[2] = el}>
           <span className='inline-left-small'>
-            <img src={img3} alt='' id="Image"></img>
+            <img src={img3} alt='GlaxoSmothKline'></img>
           </span>
           <span className='inline-right-big'>
             <h1>Working with&nbsp;
@@ -125,7 +124,7 @@ function About() {
             <br />
           </div>
           <div className='inline-right-small'>
-            <img src={img4} alt='' id="Image"></img>
+            <img src={img4} alt='GlaxoSmothKline Continued'></img>
           </div>
         </div>
       </div>

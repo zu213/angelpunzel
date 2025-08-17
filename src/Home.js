@@ -51,7 +51,7 @@ function Home() {
     <div className='home'>
 
       <div className='banner'>
-        <img className='banner-image' onLoad={() => setBannerLoaded(true)} alt="" src={autumnPath}></img>
+        <img className='banner-image' onLoad={() => setBannerLoaded(true)} alt="Autumn Banner" src={autumnPath}></img>
         {bannerLoaded && <div className='centered-banner'>
             Getting you through change
         </div>}
@@ -71,13 +71,13 @@ function Home() {
           the current environment.&lrm;
         </div>
         <div className='sub-generic-div-right fixed-height'>
-          <img className='portrait' src={img1} alt=''></img>
+          <img className='portrait' src={img1} alt='Portrait of Haydn Upstone'></img>
         </div>
       </div>
 
       <div className='generic-div darker-div' ref={el => divToSlideParent.current[1] = el}>
         <div className='sub-generic-div-left'>
-            <img src={img2} alt=''></img>
+            <img src={img2} alt='Project Managment'></img>
           </div>
           <div className='sub-generic-div-right slide-in-right' ref={el => divToSlide.current[1] = el}>
             <h1>EXPERTISE</h1>
@@ -103,7 +103,7 @@ function Home() {
             solutions.&lrm;
         </div>
         <div className='sub-generic-div-right'>
-            <img src={img3} alt=''></img>
+            <img src={img3} alt='Troubleshooting'></img>
         </div>
           
       </div>
