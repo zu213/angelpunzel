@@ -2,10 +2,11 @@ import './css/Home.css';
 
 import { useRef, useEffect, useState } from 'react';
 
-import img1 from './imgs/home1.webp';
-import img2 from './imgs/discussion.jpg';
-import img3 from './imgs/home3.webp';
-import autumnPath from './imgs/autumncropped2.jpg'
+import img1 from './imgs/headshot.webp';
+import img2 from './imgs/project-management.webp';
+import img3 from './imgs/help.webp';
+import autumnWebp from './imgs/automn-banner.webp'
+import discussionWebp from './imgs/project-management.webp'
 
 
 
@@ -51,7 +52,7 @@ function Home() {
     <div className='home'>
 
       <div className='banner'>
-        <img className='banner-image' onLoad={() => setBannerLoaded(true)} alt="Autumn Banner" src={autumnPath}></img>
+        <img className='banner-image' onLoad={() => setBannerLoaded(true)} alt="Autumn Banner" src={autumnWebp}></img>
         {bannerLoaded && <div className='centered-banner'>
             Getting you through change
         </div>}
@@ -77,22 +78,25 @@ function Home() {
 
       <div className='generic-div darker-div' ref={el => divToSlideParent.current[1] = el}>
         <div className='sub-generic-div-left'>
-            <img src={img2} alt='Project Managment'></img>
-          </div>
-          <div className='sub-generic-div-right slide-in-right' ref={el => divToSlide.current[1] = el}>
-            <h1>EXPERTISE</h1>
-            
-            Specialising in project management of business integration,
-            and successful transformation in the pharma industry.
-            <br />
-            <br />
-            Working with companies such as:
-            <ul>
-              <li><a href="https://www.nxera.life/"  target="_blank" rel="noreferrer">Nxera</a></li>
-              <li><a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-seqirus"  target="_blank" rel="noreferrer">CSL Seqirus</a></li>
-              <li><a href="https://www.gsk.com/en-gb/" target="_blank" rel="noreferrer">GlaxoKlineSmith</a></li>
-            </ul>
-          </div>
+          <picture>
+            <source srcSet={discussionWebp} type="image/webp" />
+            <img src={img2} alt="Project Managment" />
+          </picture>
+        </div>
+        <div className='sub-generic-div-right slide-in-right' ref={el => divToSlide.current[1] = el}>
+          <h1>EXPERTISE</h1>
+          
+          Specialising in project management of business integration,
+          and successful transformation in the pharma industry.
+          <br />
+          <br />
+          Working with companies such as:
+          <ul>
+            <li><a href="https://www.nxera.life/"  target="_blank" rel="noreferrer">Nxera</a></li>
+            <li><a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-seqirus"  target="_blank" rel="noreferrer">CSL Seqirus</a></li>
+            <li><a href="https://www.gsk.com/en-gb/" target="_blank" rel="noreferrer">GlaxoKlineSmith</a></li>
+          </ul>
+        </div>
       </div>
 
       <div className='generic-div' ref={el => divToSlideParent.current[2] = el}>

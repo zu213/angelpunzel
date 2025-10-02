@@ -5,7 +5,7 @@ import Home from './Home.js';
 import About from './About.js';
 import Contact from './Contact.js';
 
-import logo from './imgs/logo2.jpg'
+import logo from './imgs/logo.webp'
 
 function App() {
   return (
@@ -26,6 +26,13 @@ function App() {
 
           <Route path='/contact-me' element={<Contact/>} />
         </Routes>
+
+        <footer className='footer'>
+          <hr />
+          <div>© 2025 Angelpunzel. All rights reserved.</div>
+        </footer>
+        <div >
+        </div>
     </div>
   );
 }
