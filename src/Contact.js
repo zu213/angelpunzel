@@ -36,6 +36,16 @@ function Contact() {
       message: message
     }
 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailPattern.test(params.email)) {
+      alert("Please fill out the email category with a valid email")
+      return
+    }
+    if(params.message === "") {
+      alert("Please fill out the message category")
+      return
+    }
+
     setName("")
     setEmail("")
     setPhone("")
