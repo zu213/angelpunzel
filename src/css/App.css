@@ -21,22 +21,28 @@
   background-color: #e5e5e5;
 }
 
-.navbar a{
-  color: black;
+.navbar a {
+  color: rgb(46, 46, 46);
   padding: 2%;
 }
 
 .navbar a:hover{
-  color: black;
+  color: rgb(46, 46, 46);
 }
 
 .navbar a:visited:hover{
-  color: black;
+  color: rgb(46, 46, 46);
 }
 
 .navbar a:visited{
-  color: black;
+  color: rgb(46, 46, 46);
 }
+
+.navbar .selected {
+  font-weight: 500;
+  color: rgb(0, 0, 0)  !important;
+}
+
 
 .slide-in-left {
     opacity: 0;

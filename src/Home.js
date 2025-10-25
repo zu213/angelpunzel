@@ -8,34 +8,34 @@ import img3 from './imgs/help.webp';
 import autumnWebp from './imgs/automn-banner.webp'
 import discussionWebp from './imgs/project-management.webp'
 
-
-
 function Home() {
-  const divToSlide = useRef([])
+  const divToSlide = useRef({'0': [], '1': [], '2': []})
   const divToSlideParent = useRef([])
   const [bannerLoaded, setBannerLoaded] = useState(false)
 
   const getCallback = (i) => {
     return (entries, _) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            divToSlide.current[i].classList.add('visible');
-          }
-        });
-      };
+      entries.forEach(entry => {
+        console.log(divToSlide.current)
+        if (entry.isIntersecting) {
+          console.log(divToSlide.current)
+          divToSlide.current[String(i)].forEach(e => e.classList.add('visible'))
+        }
+      })
+    }
   }
 
   useEffect(() => {
-    if (divToSlide.current.length < 1 || divToSlideParent.current.length < 1) return;
+    if (Object.keys(divToSlide.current).length < 1 || divToSlideParent.current.length < 1) return
 
     const options = {
       root: null,
       rootMargin: "0px",
       threshold: 0.5,
-    };
+    }
 
     const observers = []
-    for(let i = 0; i < divToSlide.current.length; i++) {
+    for(let i = 0; i < Object.keys(divToSlide.current).length; i++) {
       const callback = getCallback(i)
       const observer = new IntersectionObserver(callback, options);
       observer.observe(divToSlideParent.current[i]);
@@ -59,7 +59,7 @@ function Home() {
       </div>
 
       <div className='generic-div' ref={el => divToSlideParent.current[0] = el}>
-        <div className='sub-generic-div-left slide-in-left' ref={el => divToSlide.current[0] = el}>
+        <div className='sub-generic-div-left slide-in-down' ref={el => divToSlide.current['0'][0] = el}>
           <h1>WHO WE ARE</h1>
           <h2>Netsuite Implementation Expert | Pharmaceutical Specialist | Collaborative Decision Maker</h2>
           Right now many organisations are faced with the challenge of
@@ -71,19 +71,19 @@ function Home() {
           Angelpunzel can help your enterprise achieve strong results in
           the current environment.&lrm;
         </div>
-        <div className='sub-generic-div-right fixed-height'>
+        <div className='sub-generic-div-right fixed-height slide-in-down' ref={el => divToSlide.current['0'][1] = el}>
           <img className='portrait' src={img1} alt='Portrait of Haydn Upstone'></img>
         </div>
       </div>
 
-      <div className='generic-div darker-div' ref={el => divToSlideParent.current[1] = el}>
-        <div className='sub-generic-div-left'>
+      <div className='generic-div darker-div ' ref={el => divToSlideParent.current[1] = el}>
+        <div className='sub-generic-div-left slide-in-down' ref={el => divToSlide.current['1'][0] = el}>
           <picture>
             <source srcSet={discussionWebp} type="image/webp" />
             <img src={img2} alt="Project Managment" />
           </picture>
         </div>
-        <div className='sub-generic-div-right slide-in-right' ref={el => divToSlide.current[1] = el}>
+        <div className='sub-generic-div-right slide-in-down' ref={el => divToSlide.current['1'][1] = el}>
           <h1>EXPERTISE</h1>
           
           Specialising in project management of business integration,
@@ -100,13 +100,13 @@ function Home() {
       </div>
 
       <div className='generic-div' ref={el => divToSlideParent.current[2] = el}>
-        <div className='sub-generic-div-left slide-in-left' ref={el => divToSlide.current[2] = el}>
+        <div className='sub-generic-div-left slide-in-down' ref={el => divToSlide.current['2'][0] = el}>
             <h1>TROUBLESHOOTING</h1>
             Experts in assessing problems and identifying their root cause.&lrm;
             Presenting and working with your team to implement effective
             solutions.&lrm;
         </div>
-        <div className='sub-generic-div-right'>
+        <div className='sub-generic-div-right slide-in-down' ref={el => divToSlide.current['2'][1] = el}>
             <img src={img3} alt='Troubleshooting'></img>
         </div>
           

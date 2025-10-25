@@ -52,6 +52,9 @@ function Contact() {
     setMessage("")
 
     emailjs.send('service_couf6bs', 'template_jd7o6er', params, 'hr0si7yaJ8e8_bh11')
+    .then(_ => {
+      alert("Message successfully sent.")
+    })
     .error((error) => {
         console.log(error.text);
     });                                                                                                                                                                                                                                                           
@@ -76,7 +79,7 @@ function Contact() {
       </div>
 
       <div className='contact'>
-        <h1 className='left contact-intro'>SAY HELLO</h1>
+        <h1 className='left contact-intro'>CONTACT US</h1>
         <form onSubmit={handleSubmit}>
           <div className='inline'>
             <label htmlFor="fname">Name</label><br />
