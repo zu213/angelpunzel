@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import Reveal from '../components/Reveal';
+import Picture from '../components/Picture';
 
 import headshotWebp from '../imgs/headshot.webp';
 import headshotJpg from '../imgs/headshot.jpg';
-import expertiseImg from '../imgs/project-management.webp';
-import helpImg from '../imgs/help.webp';
-import banner from '../imgs/automn-banner.webp';
+import expertiseWebp from '../imgs/project-management.webp';
+import expertiseJpg from '../imgs/project-management.jpg';
+import helpWebp from '../imgs/help.webp';
+import helpJpg from '../imgs/help.jpg';
+import bannerWebp from '../imgs/automn-banner.webp';
+import bannerJpg from '../imgs/autumn-banner.jpg';
 
 export default function Home() {
   const [bannerLoaded, setBannerLoaded] = useState(false);
@@ -13,7 +17,7 @@ export default function Home() {
   return (
     <section id="home">
       <div className="hero">
-        <img className="hero__media" src={banner} alt="" onLoad={() => setBannerLoaded(true)} />
+        <Picture className="hero__media" webp={bannerWebp} fallback={bannerJpg} alt="" onLoad={() => setBannerLoaded(true)} />
         <div className="hero__scrim" />
         <div className="hero__inner container">
           {bannerLoaded && <h1 className="hero__title">Getting you through change</h1>}
@@ -37,16 +41,17 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal className="intro__portrait slide-in-down">
-            <picture>
-              <source srcSet={headshotWebp} type="image/webp" />
-              <img src={headshotJpg} alt="Haydn Upstone, pharmaceutical project management consultant and founder of Angelpunzel" />
-            </picture>
+            <Picture
+              webp={headshotWebp}
+              fallback={headshotJpg}
+              alt="Haydn Upstone, pharmaceutical project management consultant and founder of Angelpunzel"
+            />
           </Reveal>
         </div>
 
         <div className="cards">
           <Reveal className="card slide-in-down">
-            <img className="card__media" src={expertiseImg} alt="Project Managment" />
+            <Picture className="card__media" webp={expertiseWebp} fallback={expertiseJpg} alt="Project Managment" />
             <div className="card__body">
               <h2 className="section-title">EXPERTISE</h2>
               <p>
@@ -63,7 +68,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal className="card slide-in-down">
-            <img className="card__media" src={helpImg} alt="Troubleshooting" />
+            <Picture className="card__media" webp={helpWebp} fallback={helpJpg} alt="Troubleshooting" />
             <div className="card__body">
               <h2 className="section-title">TROUBLESHOOTING</h2>
               <p>

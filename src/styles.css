@@ -37,6 +37,7 @@ body {
 }
 
 img { display: block; max-width: 100%; }
+picture { display: contents; }
 ul { list-style-type: circle; }
 
 a { color: var(--link); text-decoration: none; }
@@ -240,7 +241,12 @@ p:last-child { margin-bottom: 0; }
   text-align: center;
   margin-bottom: clamp(24px, 3.5vw, 40px);
 }
-.group-head .section-title { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.group-head .section-title {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
 .group-head .kicker {
   display: block;
   font-size: 0.8rem;
@@ -267,6 +273,11 @@ p:last-child { margin-bottom: 0; }
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+.case__media--contain img {
+  object-fit: contain;
+  background: #ffffff;
+  padding: 14px;
 }
 .case__text .section-title { font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
 .case__text .subtitle { margin-bottom: 1rem; }

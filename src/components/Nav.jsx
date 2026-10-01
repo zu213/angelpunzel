@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import logo from '../imgs/logo.webp';
+import Picture from './Picture';
+import logoWebp from '../imgs/logo.webp';
+import logoJpg from '../imgs/logo.jpg';
 
 const LINKEDIN = 'https://www.linkedin.com/in/haydnupstone/';
 
@@ -11,7 +13,7 @@ export default function Nav({ sections, active }) {
     <header className="site-header">
       <div className="site-header__inner">
         <a className="brand" href="#home" onClick={close} aria-label="Angelpunzel, back to top">
-          <img src={logo} alt="Angelpunzel" />
+          <Picture webp={logoWebp} fallback={logoJpg} alt="Angelpunzel" />
         </a>
 
         <nav className={`nav-pills ${open ? 'is-open' : ''}`} aria-label="Primary">

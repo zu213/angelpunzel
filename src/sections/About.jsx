@@ -1,13 +1,19 @@
 import Reveal from '../components/Reveal';
+import Picture from '../components/Picture';
 
 import img1 from '../imgs/nxera.webp';
-import img2 from '../imgs/about2.webp';
-import img3 from '../imgs/about3.webp';
-import img4 from '../imgs/about4.webp';
+import img1Jpg from '../imgs/nxera.jpg';
+import img2 from '../imgs/seqirus.webp';
+import img2Jpg from '../imgs/seqirus.jpg';
+import img3 from '../imgs/gsk.webp';
+import img3Jpg from '../imgs/gsk.jpg';
+import img4 from '../imgs/gsk2.webp';
+import img4Jpg from '../imgs/gsk2.jpg';
 
 const CASES = [
   {
     img: img1,
+    fallback: img1Jpg,
     alt: 'Nxera pharma',
     title: (
       <>Working with&nbsp;<a href="https://www.nxera.life/" target="_blank" rel="noreferrer">Nxera Pharma</a></>
@@ -22,6 +28,7 @@ const CASES = [
   },
   {
     img: img2,
+    fallback: img2Jpg,
     alt: 'Seqirus',
     title: (
       <>Working with&nbsp;<a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-seqirus" target="_blank" rel="noreferrer">CSL Seqirus</a></>
@@ -37,9 +44,10 @@ const CASES = [
   },
   {
     img: img3,
-    alt: 'GlaxoSmothKline',
+    fallback: img3Jpg,
+    alt: 'GSK',
     title: (
-      <>Working with&nbsp;<a href="https://www.gsk.com/en-gb/" target="_blank" rel="noreferrer">GlaxoSmithKline</a></>
+      <>Working with&nbsp;<a href="https://www.gsk.com/en-gb/" target="_blank" rel="noreferrer">GSK</a></>
     ),
     market: 'United Kingdom listed plc (FTSE 100)',
     body: (
@@ -51,9 +59,11 @@ const CASES = [
   },
   {
     img: img4,
-    alt: 'GlaxoSmothKline Continued',
+    fallback: img4Jpg,
+    alt: 'GSK Continued',
+    contain: true,
     title: (
-      <>Working with&nbsp;<a href="https://www.gsk.com/en-gb/" target="_blank" rel="noreferrer">GlaxoSmithKline</a></>
+      <>Working with&nbsp;<a href="https://www.gsk.com/en-gb/" target="_blank" rel="noreferrer">GSK</a></>
     ),
     market: 'United Kingdom listed plc (FTSE 100)',
     body: (
@@ -81,8 +91,8 @@ export default function About() {
       <div className="cases">
         {CASES.map((c, i) => (
           <Reveal className="case slide-in-down" key={i}>
-            <div className="case__media">
-              <img src={c.img} alt={c.alt} />
+            <div className={`case__media${c.contain ? ' case__media--contain' : ''}`}>
+              <Picture webp={c.img} fallback={c.fallback} alt={c.alt} />
             </div>
             <div className="case__text">
               <h2 className="section-title">{c.title}</h2>
