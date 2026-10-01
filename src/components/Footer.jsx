@@ -15,7 +15,7 @@ export default function Footer() {
           <a href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn</a>
         </nav>
 
-        <p className="site-footer__legal">© 2025 Angelpunzel. All rights reserved.</p>
+        <p className="site-footer__legal">© 2026 Angelpunzel. All rights reserved.</p>
       </div>
     </footer>
   );

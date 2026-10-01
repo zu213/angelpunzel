@@ -1,6 +1,6 @@
 import Reveal from '../components/Reveal';
 
-import img1 from '../imgs/about1.webp';
+import img1 from '../imgs/nxera.webp';
 import img2 from '../imgs/about2.webp';
 import img3 from '../imgs/about3.webp';
 import img4 from '../imgs/about4.webp';
@@ -12,7 +12,7 @@ const CASES = [
     title: (
       <>Working with&nbsp;<a href="https://www.nxera.life/" target="_blank" rel="noreferrer">Nxera Pharma</a></>
     ),
-    market: 'Japanese listed biotechnology group',
+    market: 'Japanese listed technology-powered biopharmaceutical company',
     body: (
       <p>
         Project managing the introduction of a new senior employee long term incentive plan.
@@ -24,7 +24,7 @@ const CASES = [
     img: img2,
     alt: 'Seqirus',
     title: (
-      <>Working with&nbsp;<a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-seqirus" target="_blank" rel="noreferrer">Seqirus</a>&nbsp;(a CSL company)</>
+      <>Working with&nbsp;<a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-seqirus" target="_blank" rel="noreferrer">CSL Seqirus</a></>
     ),
     market: 'Australian listed biotechnology company (ASX 20)',
     body: (

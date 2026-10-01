@@ -24,11 +24,11 @@ export default function Home() {
         <div className="intro">
           <Reveal className="intro__text slide-in-down">
             <h2 className="section-title">WHO WE ARE</h2>
-            <h2 className="subtitle">Netsuite Implementation Expert | Pharmaceutical Specialist | Collaborative Decision Maker</h2>
+            <h2 className="subtitle">Complex Finance Transformation | ERP Implementation | Post-M&A Integration | Pharmaceutical Specialist | Netsuite Implementation</h2>
             <p>
               Right now many organisations are faced with the challenge of
               gaining competitive advantage in a rapidly changing
-              technology driven environment, while meeting the demands of
+              technology and AI driven environment, while meeting the demands of
               cost cutting.
             </p>
             <p>
@@ -55,9 +55,9 @@ export default function Home() {
               </p>
               <p>Working with companies such as:</p>
               <ul>
-                <li><a href="https://www.nxera.life/" target="_blank" rel="noreferrer">Nxera</a></li>
+                <li><a href="https://www.nxera.life/" target="_blank" rel="noreferrer">Nxera Pharma</a></li>
                 <li><a href="https://www.csl.com/we-are-csl/our-businesses-and-products/csl-seqirus" target="_blank" rel="noreferrer">CSL Seqirus</a></li>
-                <li><a href="https://www.gsk.com/en-gb/" target="_blank" rel="noreferrer">GlaxoKlineSmith</a></li>
+                <li><a href="https://www.gsk.com/en-gb/" target="_blank" rel="noreferrer">GSK</a></li>
               </ul>
             </div>
           </Reveal>
