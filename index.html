@@ -1,15 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Haydn Upstone's personal website, Angelpunzel" />
-    <meta name="keywords" content="Haydn Upstone, Haydn, Nxera, CSL Seqirus, GlaxoKlineSmith" />
-    <meta name="author" content="Haydn Upstone" />
 
-    <title>Angelpunzel</title>
+    <title>Angelpunzel — Pharmaceutical Project Management | Haydn Upstone</title>
+    <meta
+      name="description"
+      content="Angelpunzel is Haydn Upstone's consultancy specialising in pharmaceutical and biotech project management, finance transformation and NetSuite implementation across the UK."
+    />
+    <meta
+      name="keywords"
+      content="Haydn Upstone, Angelpunzel, pharmaceutical project management, biotech project management, finance transformation, NetSuite implementation, pharma consultant, change management, Nxera, CSL Seqirus, GlaxoSmithKline, Berkhamsted"
+    />
+    <meta name="author" content="Haydn Upstone" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.angelpunzel.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Angelpunzel" />
+    <meta property="og:title" content="Angelpunzel — Pharmaceutical Project Management | Haydn Upstone" />
+    <meta
+      property="og:description"
+      content="Haydn Upstone's consultancy specialising in pharmaceutical and biotech project management, finance transformation and NetSuite implementation across the UK."
+    />
+    <meta property="og:url" content="https://www.angelpunzel.com/" />
+    <meta property="og:image" content="https://www.angelpunzel.com/logo-nobg.png" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Angelpunzel — Pharmaceutical Project Management | Haydn Upstone" />
+    <meta
+      name="twitter:description"
+      content="Haydn Upstone's consultancy specialising in pharmaceutical and biotech project management, finance transformation and NetSuite implementation across the UK."
+    />
+    <meta name="twitter:image" content="https://www.angelpunzel.com/logo-nobg.png" />
+
     <link rel="icon" href="/logo-nobg.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://www.angelpunzel.com/#business",
+            "name": "Angelpunzel",
+            "url": "https://www.angelpunzel.com/",
+            "image": "https://www.angelpunzel.com/logo-nobg.png",
+            "description": "Pharmaceutical and biotech project management, finance transformation and NetSuite implementation consultancy led by Haydn Upstone.",
+            "areaServed": "GB",
+            "knowsAbout": [
+              "Pharmaceutical project management",
+              "Biotech project management",
+              "Finance transformation",
+              "NetSuite implementation",
+              "Post-merger integration"
+            ],
+            "founder": { "@id": "https://www.angelpunzel.com/#haydn" },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Berkhamsted",
+              "addressCountry": "GB"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.angelpunzel.com/#haydn",
+            "name": "Haydn Upstone",
+            "jobTitle": "Pharmaceutical Project Management Consultant",
+            "url": "https://www.angelpunzel.com/",
+            "worksFor": { "@id": "https://www.angelpunzel.com/#business" },
+            "knowsAbout": [
+              "Pharmaceutical project management",
+              "Finance transformation",
+              "NetSuite implementation",
+              "Biotechnology"
+            ],
+            "sameAs": ["https://www.linkedin.com/in/haydnupstone/"]
+          }
+        ]
+      }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +94,11 @@
     />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      Angelpunzel — pharmaceutical and biotech project management, finance transformation and
+      NetSuite implementation consultancy led by Haydn Upstone. Please enable JavaScript to view
+      the full site, or contact us via LinkedIn.
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

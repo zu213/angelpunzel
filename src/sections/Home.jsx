@@ -39,7 +39,7 @@ export default function Home() {
           <Reveal className="intro__portrait slide-in-down">
             <picture>
               <source srcSet={headshotWebp} type="image/webp" />
-              <img src={headshotJpg} alt="Portrait of Haydn Upstone" />
+              <img src={headshotJpg} alt="Haydn Upstone, pharmaceutical project management consultant and founder of Angelpunzel" />
             </picture>
           </Reveal>
         </div>
